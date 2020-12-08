@@ -1,0 +1,84 @@
+{
+  "name": "test123",
+  "productName": "Consignment Tags Update",
+  "version": "1.0.0",
+  "description": "App to update consignment tags",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "test123",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/assets/icons/win/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/assets/icons/win/icon.ico",
+      "uninstallerIcon": "src/assets/icons/win/icon.ico",
+      "uninstallDisplayName": "Consignment Tags Update",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ariel Vidal",
+    "email": "Ariel.m.vidal@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "src/assets/icons/win/icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "test123"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.4.1",
+    "oracledb": "^5.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.52",
+    "@electron-forge/maker-deb": "6.0.0-beta.52",
+    "@electron-forge/maker-rpm": "6.0.0-beta.52",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.52",
+    "@electron-forge/maker-zip": "6.0.0-beta.52",
+    "electron": "9.0.5",
+    "electron-builder": "^22.7.0"
+  }
+}

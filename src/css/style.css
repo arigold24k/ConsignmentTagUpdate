@@ -1,0 +1,57 @@
+
+body {
+    /*background-image: url("../assets/images/coil_of_steel.jpg");*/
+    /*background-color: aquamarine;*/
+    background: rgba(76, 175, 80, 0.3);
+    text-align: center;
+}
+
+img {
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.invalid-feedback {
+    display: none
+}
+
+#tag-form, .formgroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.shipto_block {
+    display: block
+}
+
+tr, td {
+    alignment: center;
+}
+
+tbody {
+    display:block;
+    /*height:150px;*/
+    overflow:auto;
+}
+/*thead, tbody tr {*/
+    /*display:table;*/
+    /*width:100%;*/
+    /*table-layout:fixed;*/
+/*}*/
+/*thead {*/
+    /*width: calc( 100% - 1em )*/
+/*}*/
+table {
+    width:100%;
+}

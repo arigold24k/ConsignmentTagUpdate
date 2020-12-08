@@ -1,0 +1,86 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Tags-PO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href='../css/style.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="po-number" data-error="wrong" data-success="right" class="active">PO Number: </label>
+                    <input id="po-number" type="text" class="validate" required="" aria-required="true">
+
+                </div>
+                <div class="input-field col s6">
+                    <button class="btn waves-effect waves-light" type="click" name="action" id="update-po">Update PO</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+        <table class="row" id="queryResults">
+            <tr>
+                <th>Ship To Number</th>
+                <th>Item Code</th>
+                <th>Tag Number</th>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h4>Error</h4>
+            <p>Error in updating.  Please try again.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal-error-ok">Ok</a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h4>Success</h4>
+            <p>Tags were updated Succesfully.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal-success-ok">Ok</a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h4>Confrim</h4>
+            <div id="confirm-content"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal-confirm-ok">Ok</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal-confirm-cancel">Cancel</a>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+<script src="../js/taglist.js"></script>
+
+</body>
+</html>

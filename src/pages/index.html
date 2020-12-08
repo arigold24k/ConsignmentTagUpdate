@@ -1,0 +1,83 @@
+<!doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JCI Update Consignment PO</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href='../css/style.css'>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+</head>
+<body>
+<div class="container responsive-table table-status-sheet">
+<div class="row">
+    <div class="col s12">
+        <h5>Current Invoiced Consignment Tags</h5>
+    </div>
+</div>
+<div class="row">
+
+            <!--<div class="formgroup">-->
+                <!--&lt;!&ndash; Label for Text Box &ndash;&gt;-->
+                <!--<div class="shipto_block">-->
+                <!--<label id="shipto">Ship To Number: </label>-->
+
+                <!--&lt;!&ndash; Text Input Box &ndash;&gt;-->
+               <!---->
+                <!--&lt;!&ndash;<div class="valid-feedback">Valid.</div>&ndash;&gt;-->
+                <!--<div class="invalid-feedback" display>Please fill out this field.</div>-->
+                <!--</div>-->
+                <!--<label for="invdate">Invoice Date: </label>-->
+
+                <!--&lt;!&ndash; Text Input Box &ndash;&gt;-->
+                <!--<input class = 'form-control' type="text" id="invdate" name= "invdate" placeholder="Enter Invoice Date (MM/DD/YYYY)" required/>-->
+
+                <!---->
+
+            <!--</div>-->
+
+            <!--<div class="formgroup">-->
+                <!--&lt;!&ndash; Label for Text Box &ndash;&gt;-->
+                <!--<label for="invdate">Invoice Date: </label>-->
+
+                <!--&lt;!&ndash; Text Input Box &ndash;&gt;-->
+                <!--<input class = 'form-control' type="text" id="invdate" name= "invdate" placeholder="Enter Invoice Date (MM/DD/YYYY)" required/>-->
+                <!--&lt;!&ndash;<div class="valid-feedback">Valid.</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="invalid-feedback">Please fill out this field.</div>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<br/>-->
+            <!-- Submit Button -->
+
+</div>
+    <div class="row">
+        <table class="row" id="queryResults">
+            <tr>
+                <th class="center-align">Select</th>
+                <th class="center-align">Ship To Number</th>
+                <th class="center-align">Item Code</th>
+                <th class="center-align">Tag Number</th>
+                <th class="center-align">Customer PO Number</th>
+                <th class="center-align">Invoice Date</th>
+            </tr>
+            <tr>
+                <td><label><input type="checkbox" class="center-align" id="selectAll"/><span/></label></td>
+                <td> <input class = 'form-control filterbox center-align' type="text" id="shipto"/></td>
+                <td><input class = 'form-control filterbox center-align' type="text" id="item-code" /></td>
+                <td><input class = 'form-control filterbox center-align' type="text" id="tag-number" /></td>
+                <td><input class = 'form-control center-align' type="text" id="po-number"/></td>
+                <td><input class = 'form-control filterbox center-align' type="text" id="invoice-date"/></td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <a id="get-tags" class="waves-effect waves-light btn get-tags">Next</a>
+    </div>
+
+</div>
+</div>
+
+<script src="../js/index.js"></script>
+
+</body>
+</html>
