@@ -221,6 +221,8 @@ const refresh_page = () => {
     Array.from(filterbox).forEach((val) => {
        val.value = '';
     });
+    let checkbox_ = document.getElementById('selectAll');
+    checkbox_.checked = false;
   //console.log('removed old data.');
   //console.log('Beginning of run_get_tags.');
   run_get_tags();
