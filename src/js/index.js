@@ -375,7 +375,7 @@ ipcRenderer.on('update:refresh', (e) => {
 
 document.addEventListener('change', (e) => {
     console.log('This is the target', e.target);
-    console.log('This is the target', e.target.className);
+    console.log('This is the target', e.target.id);
     if (e.target && e.target.className.indexOf('selectButton') !== -1) {
         console.log("Check box", e.target.checked);
         console.log('Index of tag, ', selected.indexOf(e.target));
@@ -433,7 +433,7 @@ document.addEventListener('change', (e) => {
                             "itemcode": elem.getAttribute('data-item-code'),
                             "tagnumber": elem.getAttribute('data-tag-number')
                         });
-                        elem.children[0].children[0].checked = true
+                        elem.children[0].children[0].children[0].checked = true
                     }
                 });
                // selectButton.checked = true;
