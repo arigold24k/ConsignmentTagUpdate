@@ -17,6 +17,15 @@ $(document).ready(async function(e){
         console.log('Error, ', err);
     }
     finally {
+        //have to initialize the modal
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+        var options = {};
+
+        //setting error modal to a variable
+        const elemError = document.getElementById('errorModal');
+        const instanceError = M.Modal.getInstance(elemError);
+
         //filter code for ship to number
         let shipTo = document.querySelector('#shipto');
         let itemcode = document.querySelector('#item-code');
@@ -52,7 +61,8 @@ $(document).ready(async function(e){
             e.preventDefault();
             console.log('Submit button works.');
             if(selected.length == 0) {
-                alert('Please Select at least one item');
+                //alert('Please Select at least one item');
+                instanceError.open();
             }else{
 
                 console.log('Send Data Object: ', selected);
@@ -60,6 +70,12 @@ $(document).ready(async function(e){
                 ipcRenderer.send('update:tags', selected);
             };
 
+        });
+
+        let okErrorButton = document.getElementById('modal-error-ok');
+        okErrorButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            instanceError.close();
         });
 
 

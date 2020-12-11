@@ -11,7 +11,7 @@ const path = require('path');
 var mainwindow;
 var tagWin;
 
-process.env.NODE_ENV = 'production';
+//process.env.NODE_ENV = 'production';
 
 tagWindow =  (cb) =>{
         tagWin = new BrowserWindow({

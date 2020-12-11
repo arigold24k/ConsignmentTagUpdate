@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href='../css/style.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
     <script>window.$ = window.jQuery = require('jquery');</script>
 </head>
@@ -72,6 +73,17 @@
     </div>
     <div class="row">
         <a id="get-tags" class="waves-effect waves-light btn get-tags">Next</a>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h4>Error</h4>
+            <p>No tags selected.  Please select a minimum of one(1) tag.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="modal-error-ok">Ok</a>
+        </div>
     </div>
 
 </div>

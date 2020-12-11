@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 const path = require('path');
 dotenv.config({path: path.join(__dirname, '/../../' ,'.env')});
-const dbname = 'PSSI';
+const dbname = 'SMTRAIN';
 
 console.log('Hitting Oracle Connection');
 const configOracleObj = {

@@ -48,7 +48,7 @@ const ormOrcle = {
                 let keys_ = Object.keys(incoming_data.tags[i]);
 
                 // for (let j = 0; j < keys_.length; i++) {
-                    console.log(`UPDATE ST_INVOICES SET CUST_PO_NUMBER = '${incoming_data.po_number}' WHERE INVOICE_ID IN (SELECT INVOICE_ID FROM ST_INVOICE_LINES WHERE 1=1 AND INV_ITEM_TAG IN ('${incoming_data.tags[i][keys_[2]]}') AND CUST_SHIPTO_NUM = '${incoming_data.tags[i][keys_[0]]}')`);
+                    //console.log(`UPDATE ST_INVOICES SET CUST_PO_NUMBER = '${incoming_data.po_number}' WHERE INVOICE_ID IN (SELECT INVOICE_ID FROM ST_INVOICE_LINES WHERE 1=1 AND INV_ITEM_TAG IN ('${incoming_data.tags[i][keys_[2]]}') AND CUST_SHIPTO_NUM = '${incoming_data.tags[i][keys_[0]]}')`);
                     results = await connection.execute(`BEGIN UPDATE ST_INVOICES SET CUST_PO_NUMBER = '${incoming_data.po_number}' WHERE INVOICE_ID IN (SELECT INVOICE_ID FROM ST_INVOICE_LINES WHERE 1=1 AND INV_ITEM_TAG IN ('${incoming_data.tags[i][keys_[2]]}') AND CUST_SHIPTO_NUM = '${incoming_data.tags[i][keys_[0]]}');  COMMIT; END;`);
 
                     console.log("results: ", results)
