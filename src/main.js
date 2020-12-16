@@ -11,7 +11,7 @@ const path = require('path');
 var mainwindow;
 var tagWin;
 
-//process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'production';
 
 tagWindow =  (cb) =>{
         tagWin = new BrowserWindow({
@@ -126,7 +126,7 @@ ipcMain.on('update:tags', async (e, res) => {
     await tagWindow( (err, window) => {
         setTimeout(() => {
             window.webContents.send('update:tags', res);
-        }, 1000);
+        }, 1500);
     });
     // tagWin.webContents.send('update:tags', res);
 
